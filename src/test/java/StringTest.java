@@ -22,10 +22,12 @@ public class StringTest {
     public void test_lines() {
         String multipleLinesString = "First line.\nSecond line.\nThird line.\n";
         List<String> lines = multipleLinesString.lines().collect(Collectors.toList());
-
+        String text = "Hello\n I am salah\n fullstack java developer !";
+        var textList = text.lines().collect(Collectors.toList());
         assertEquals("First line.", lines.get(0));
         assertEquals("Second line.", lines.get(1));
         assertEquals("Third line.", lines.get(2));
+        assertEquals(3, textList.size());
     }
 
     @Test
